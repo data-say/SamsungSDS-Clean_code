@@ -9,6 +9,14 @@ public class GildedRoseTest {
 	@Test
 	public void Step1_GildedRose_생성자_테스트() {
 		
+		// arrange
+		Item[] items= new Item[]{};
+		
+		// act
+		GildedRose gildedRose= new GildedRose(items);
+		
+		// assert
+		assertNotNull(gildedRose);
 	}
 	
 	@Test
