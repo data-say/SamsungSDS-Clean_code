@@ -2,8 +2,9 @@ package com.gildedrose;
 
 public class AgedBrieItem {
 
+	private Item item;
+	
 	public AgedBrieItem(Item item) {
-		// TODO Auto-generated constructor stub
+		this.item= item;
 	}
-
 }
