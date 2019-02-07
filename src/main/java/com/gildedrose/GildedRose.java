@@ -13,20 +13,18 @@ class GildedRose {
 	public void updateQuality() {
 		for (int i = 0; i < items.length; i++) {
 			Item item = items[i];
+			GildedRoseItem gildedRoseItem;
+			
 			if (item.name.equals(AGED_BRIE)) {
-				GildedRoseItem gildedRoseItem;
 				gildedRoseItem = new AgedBrieItem(item);
 				gildedRoseItem.updateQuality();
 			} else if (item.name.equals(BACKSTAGE_PASS)) {
-				GildedRoseItem gildedRoseItem;
 				gildedRoseItem = new BackStagePassItem(item); 
 				gildedRoseItem.updateQuality();
 			} else if (item.name.equals(SULFURAS)) {
-				GildedRoseItem gildedRoseItem;
 				gildedRoseItem = new SulfurasItem(item);
 				gildedRoseItem.updateQuality(); 
 			} else {
-				GildedRoseItem gildedRoseItem;
 				gildedRoseItem = new NormalItem(item); 
 				gildedRoseItem.updateQuality();
 			}
