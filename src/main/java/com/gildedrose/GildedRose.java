@@ -43,6 +43,11 @@ class GildedRose {
 				if (item.quality > 0) {
 
 				}
+				
+				if (item.sellIn < 0) {
+					if (item.quality > 0) {
+					}
+				}
 			} else {
 				if (item.quality > 0) {
 					item.quality = item.quality - 1;
@@ -59,10 +64,7 @@ class GildedRose {
 			} else if (item.name.equals(BACKSTAGE_PASS)) {
 				
 			} else if (item.name.equals(SULFURAS)) {
-				if (item.sellIn < 0) {
-					if (item.quality > 0) {
-					}
-				}
+				
 			} else {
 				if (item.sellIn < 0) {
 					if (item.quality > 0) {
