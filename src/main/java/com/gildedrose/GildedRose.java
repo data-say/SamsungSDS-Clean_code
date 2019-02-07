@@ -18,7 +18,7 @@ class GildedRose {
 			} else if (item.name.equals(BACKSTAGE_PASS)) {
 				updateQualityForBackstagePass(item);
 			} else if (item.name.equals(SULFURAS)) {
-				updateQualityForSulfuras(); 
+				updateQualityForSulfuras(item); 
 			} else {
 				updateQualityForNormal(item);
 			}
@@ -42,8 +42,7 @@ class GildedRose {
 		}
 	}
 
-	private void updateQualityForSulfuras() {
-		System.out.println("sulfuras temp log.");
+	private void updateQualityForSulfuras(Item item) {
 	}
 
 	private void updateQualityForBackstagePass(Item item) {
