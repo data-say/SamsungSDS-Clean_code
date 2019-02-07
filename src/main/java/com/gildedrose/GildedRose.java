@@ -13,15 +13,9 @@ class GildedRose {
 	public void updateQuality() {
 		for (int i = 0; i < items.length; i++) {
 			Item item = items[i];
-			updateQuality(item);
-			
 			GildedRoseItem gildedRoseItem= GildedRoseItemFactory.getInstance().createGildedRoseItem(item); 
+			gildedRoseItem.updateQuality();
 			gildedRoseItem.updateSellIn();
 		}
-	}
-
-	private void updateQuality(Item item) {
-		GildedRoseItem gildedRoseItem = GildedRoseItemFactory.getInstance().createGildedRoseItem(item);
-		gildedRoseItem.updateQuality();
 	}
 }
