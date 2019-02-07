@@ -199,4 +199,20 @@ public class GildedRoseTest {
 		assertEquals(0, items[0].sellIn);
 		assertEquals(55, items[0].quality);		
 	}
+	
+	@Test
+	public void Normal아이템_판매기간1_품질5_테스트() {
+		
+		// arrange
+		Item[] items= new Item[]{new Item(NORMAL_ITEM, 1, 5)};
+		GildedRose gildedRose= new GildedRose(items);
+		
+		// act
+		gildedRose.updateQuality();
+		
+		// assert
+		assertEquals(NORMAL_ITEM, items[0].name);
+		assertEquals(0, items[0].sellIn);
+		assertEquals(4, items[0].quality);		
+	}
 }
