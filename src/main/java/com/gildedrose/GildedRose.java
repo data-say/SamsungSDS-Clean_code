@@ -17,6 +17,7 @@ class GildedRose {
 				AgedBrieItem agedBrieItem= new AgedBrieItem(item);
 				agedBrieItem.updateQualityForAgedBrie();
 			} else if (item.name.equals(BACKSTAGE_PASS)) {
+				BackStagePassItem backStagePassItem= new BackStagePassItem(item); 
 				updateQualityForBackstagePass(item);
 			} else if (item.name.equals(SULFURAS)) {
 				updateQualityForSulfuras(item); 
