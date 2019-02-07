@@ -64,16 +64,6 @@ class GildedRose {
 			} else {
 				item.sellIn = item.sellIn - 1;
 			}
-
-			if (item.name.equals(AGED_BRIE)) {
-				
-			} else if (item.name.equals(BACKSTAGE_PASS)) {
-				
-			} else if (item.name.equals(SULFURAS)) {
-				
-			} else {
-				
-			}
 		}
 	}
 }
