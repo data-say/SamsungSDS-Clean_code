@@ -5,7 +5,12 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class GildedRoseTest {
-
+	
+	public static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
+	public static final String NORMAL_ITEM = "Normal Item";
+	public static final String BACKSTAGE_PASS = "Backstage passes to a TAFKAL80ETC concert";
+	public static final String AGED_BRIE = "Aged Brie";
+	
 	@Test
 	public void Step1_GildedRose_생성자_테스트() {
 		
@@ -23,14 +28,14 @@ public class GildedRoseTest {
 	public void Step2_Normal아이템_판매기간0_품질0_테스트() {
 		
 		// arrange
-		Item[] items= new Item[]{new Item("Normal Item", 0, 0)};
+		Item[] items= new Item[]{new Item(NORMAL_ITEM, 0, 0)};
 		GildedRose gildedRose= new GildedRose(items);
 		
 		// act
 		gildedRose.updateQuality();
 		
 		// assert
-		assertEquals("Normal Item", items[0].name);
+		assertEquals(NORMAL_ITEM, items[0].name);
 		assertEquals(-1, items[0].sellIn);
 		assertEquals(0, items[0].quality);
 	}
@@ -39,14 +44,14 @@ public class GildedRoseTest {
 	public void Step3_Normal아이템_판매기간0_품질5_테스트() {
 		
 		// arrange
-		Item[] items= new Item[]{new Item("Normal Item", 0, 5)};
+		Item[] items= new Item[]{new Item(NORMAL_ITEM, 0, 5)};
 		GildedRose gildedRose= new GildedRose(items);
 		
 		// act
 		gildedRose.updateQuality();
 		
 		// assert
-		assertEquals("Normal Item", items[0].name);
+		assertEquals(NORMAL_ITEM, items[0].name);
 		assertEquals(-1, items[0].sellIn);
 		assertEquals(3, items[0].quality);		
 	}
@@ -55,14 +60,14 @@ public class GildedRoseTest {
 	public void Step4_Sulfuras아이템_판매기간0_품질5_테스트() {
 		
 		// arrange
-		Item[] items= new Item[]{new Item("Sulfuras, Hand of Ragnaros", 0, 5)};
+		Item[] items= new Item[]{new Item(SULFURAS, 0, 5)};
 		GildedRose gildedRose= new GildedRose(items);
 		
 		// act
 		gildedRose.updateQuality();
 		
 		// assert
-		assertEquals("Sulfuras, Hand of Ragnaros", items[0].name);
+		assertEquals(SULFURAS, items[0].name);
 		assertEquals(0, items[0].sellIn);
 		assertEquals(5, items[0].quality);		
 	}
