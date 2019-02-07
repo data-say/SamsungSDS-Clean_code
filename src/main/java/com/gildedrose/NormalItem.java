@@ -2,8 +2,10 @@ package com.gildedrose;
 
 public class NormalItem {
 
+	private Item item;
+	
 	public NormalItem(Item item) {
-		// TODO Auto-generated constructor stub
+		this.item= item;
 	}
 
 }
