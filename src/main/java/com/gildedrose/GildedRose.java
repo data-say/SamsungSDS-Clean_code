@@ -50,6 +50,7 @@ class GildedRose {
 						if (items[i].quality > 0) {
 							if (!items[i].name.equals(SULFURAS)) {
 								items[i].quality = items[i].quality - 1;
+							} else {
 							}
 						}
 					} else {
