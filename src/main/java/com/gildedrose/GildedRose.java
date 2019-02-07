@@ -15,7 +15,7 @@ class GildedRose {
 			Item item = items[i];
 			if (item.name.equals(AGED_BRIE)) {
 				AgedBrieItem agedBrieItem= new AgedBrieItem(item);
-				updateQualityForAgedBrie(agedBrieItem, item);
+				agedBrieItem.updateQualityForAgedBrie(this, item);
 			} else if (item.name.equals(BACKSTAGE_PASS)) {
 				updateQualityForBackstagePass(item);
 			} else if (item.name.equals(SULFURAS)) {
@@ -61,18 +61,6 @@ class GildedRose {
 		
 		if (item.sellIn < 1) {
 			item.quality = item.quality - item.quality;
-		}
-	}
-
-	private void updateQualityForAgedBrie(AgedBrieItem agedBrieItem, Item item) {
-		if (item.quality < 50) {
-			item.quality = item.quality + 1;
-		}
-		
-		if (item.sellIn < 1) {
-			if (item.quality < 50) {
-				item.quality = item.quality + 1;
-			}
 		}
 	}
 }
