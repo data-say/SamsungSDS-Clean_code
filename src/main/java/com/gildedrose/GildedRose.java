@@ -13,13 +13,15 @@ class GildedRose {
 	public void updateQuality() {
 		for (int i = 0; i < items.length; i++) {
 			Item item = items[i];
-			
 			updateQuality(item);
-			
-			if (item.name.equals(SULFURAS)) {
-			} else {
-				item.sellIn = item.sellIn - 1;
-			}
+			updateSellIn(item);
+		}
+	}
+
+	private void updateSellIn(Item item) {
+		if (item.name.equals(SULFURAS)) {
+		} else {
+			item.sellIn = item.sellIn - 1;
 		}
 	}
 
