@@ -183,4 +183,20 @@ public class GildedRoseTest {
 		// assert
 		assertEquals("Normal Item, 0, 0", toString);		
 	}
+	
+	@Test
+	public void AgedBrie아이템_판매기간1_품질55_테스트() {
+		
+		// arrange
+		Item[] items= new Item[]{new Item(AGED_BRIE, 1, 55)};		
+		GildedRose gildedRose= new GildedRose(items);
+		
+		// act
+		gildedRose.updateQuality();
+		
+		// assert
+		assertEquals(AGED_BRIE, items[0].name);
+		assertEquals(0, items[0].sellIn);
+		assertEquals(55, items[0].quality);		
+	}
 }
