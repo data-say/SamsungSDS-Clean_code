@@ -77,6 +77,17 @@ public class GildedRoseTest {
 	@Test
 	public void Step6_AgedBrie아이템_판매기간0_품질0_테스트() {
 		
+		// arrange
+		Item[] items= new Item[]{new Item(AGED_BRIE, 0, 0)};		
+		GildedRose gildedRose= new GildedRose(items);
+		
+		// act
+		gildedRose.updateQuality();
+		
+		// assert
+		assertEquals(AGED_BRIE, items[0].name);
+		assertEquals(-1, items[0].sellIn);
+		assertEquals(2, items[0].quality);		
 	}
 	
 	@Test
