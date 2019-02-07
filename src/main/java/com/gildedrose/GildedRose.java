@@ -16,7 +16,7 @@ class GildedRose {
 			updateQuality(item);
 			
 			GildedRoseItem gildedRoseItem= GildedRoseItemFactory.getInstance().createGildedRoseItem(item); 
-			gildedRoseItem.updateSellIn(this, item);
+			gildedRoseItem.updateSellIn();
 		}
 	}
 

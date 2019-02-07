@@ -10,7 +10,7 @@ public abstract class GildedRoseItem {
 	
 	abstract public void updateQuality();
 
-	public void updateSellIn(GildedRose gildedRose, Item item) {
+	public void updateSellIn() {
 		if (item.name.equals(GildedRose.SULFURAS)) {
 		} else {
 			item.sellIn = item.sellIn - 1;
