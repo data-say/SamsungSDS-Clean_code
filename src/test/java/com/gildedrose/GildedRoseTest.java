@@ -139,8 +139,15 @@ public class GildedRoseTest {
 	}
 	
 	@Test
-	public void Step10_Sulfuras아이템_판매기간1_품질5_테스트() {
+	public void Step10_Sulfuras아이템_판매기간_마이너스1_품질5_테스트() {
+		Item[] items= new Item[]{new Item(SULFURAS, -1, 5)};		
+		GildedRose gildedRose= new GildedRose(items);
 		
+		gildedRose.updateQuality();
+		
+		assertEquals(SULFURAS, items[0].name);
+		assertEquals(-1, items[0].sellIn);
+		assertEquals(5, items[0].quality);		
 	}
 	
 	@Test
