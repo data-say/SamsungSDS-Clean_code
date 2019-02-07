@@ -41,6 +41,7 @@ class GildedRose {
 
 			if (!items[i].name.equals(SULFURAS)) {
 				items[i].sellIn = items[i].sellIn - 1;
+			} else {
 			}
 
 			if (items[i].sellIn < 0) {
