@@ -24,7 +24,7 @@ class GildedRose {
 				sulfurasItem.updateQualityForSulfuras(); 
 			} else {
 				NormalItem normalItem= new NormalItem(item); 
-				normalItem.updateQualityForNormal(this, item);
+				normalItem.updateQualityForNormal();
 			}
 
 			if (item.name.equals(SULFURAS)) {
