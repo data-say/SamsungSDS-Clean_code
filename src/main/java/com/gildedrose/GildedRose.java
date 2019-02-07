@@ -1,9 +1,9 @@
 package com.gildedrose;
 
 class GildedRose {
-	private static final String BACKSTAGE_PASS = "Backstage passes to a TAFKAL80ETC concert";
-	private static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
-	private static final String AGED_BRIE = "Aged Brie";
+	static final String BACKSTAGE_PASS = "Backstage passes to a TAFKAL80ETC concert";
+	static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
+	static final String AGED_BRIE = "Aged Brie";
 	Item[] items;
 
 	public GildedRose(Item[] items) {
@@ -27,21 +27,7 @@ class GildedRose {
 
 	private void updateQuality(Item item) {
 		GildedRoseItemFactory gildedRoseItemFactory= new GildedRoseItemFactory(); 
-		GildedRoseItem gildedRoseItem = createGildedRoseItem(item);
+		GildedRoseItem gildedRoseItem = gildedRoseItemFactory.createGildedRoseItem(this, item);
 		gildedRoseItem.updateQuality();
-	}
-
-	private GildedRoseItem createGildedRoseItem(Item item) {
-		GildedRoseItem gildedRoseItem;
-		if (item.name.equals(AGED_BRIE)) {
-			gildedRoseItem = new AgedBrieItem(item);
-		} else if (item.name.equals(BACKSTAGE_PASS)) {
-			gildedRoseItem = new BackStagePassItem(item); 
-		} else if (item.name.equals(SULFURAS)) {
-			gildedRoseItem = new SulfurasItem(item);
-		} else {
-			gildedRoseItem = new NormalItem(item); 
-		}
-		return gildedRoseItem;
 	}
 }
