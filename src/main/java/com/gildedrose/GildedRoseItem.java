@@ -4,8 +4,8 @@ public class GildedRoseItem {
 
 	protected Item item;
 
-	public GildedRoseItem() {
-		super();
+	public GildedRoseItem(Item item) {
+		this.item= item;
 	}
 
 }

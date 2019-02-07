@@ -3,7 +3,7 @@ package com.gildedrose;
 public class AgedBrieItem extends GildedRoseItem {
 
 	public AgedBrieItem(Item item) {
-		this.item= item;
+		super(item);
 	}
 
 	void updateQuality() {
