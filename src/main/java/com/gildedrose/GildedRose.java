@@ -26,8 +26,7 @@ class GildedRose {
 	}
 
 	private void updateQuality(Item item) {
-		GildedRoseItem gildedRoseItem;
-		gildedRoseItem = createGildedRoseItem(item);
+		GildedRoseItem gildedRoseItem = createGildedRoseItem(item);
 		gildedRoseItem.updateQuality();
 	}
 
