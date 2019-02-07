@@ -39,9 +39,9 @@ class GildedRose {
 				}
 			}
 
-			if (!items[i].name.equals(SULFURAS)) {
-				items[i].sellIn = items[i].sellIn - 1;
+			if (items[i].name.equals(SULFURAS)) {
 			} else {
+				items[i].sellIn = items[i].sellIn - 1;
 			}
 
 			if (items[i].sellIn < 0) {
