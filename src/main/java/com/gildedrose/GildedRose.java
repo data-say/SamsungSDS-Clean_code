@@ -18,7 +18,7 @@ class GildedRose {
 				agedBrieItem.updateQualityForAgedBrie();
 			} else if (item.name.equals(BACKSTAGE_PASS)) {
 				BackStagePassItem backStagePassItem= new BackStagePassItem(item); 
-				updateQualityForBackstagePass(backStagePassItem, item);
+				backStagePassItem.updateQualityForBackstagePass(this, item);
 			} else if (item.name.equals(SULFURAS)) {
 				updateQualityForSulfuras(item); 
 			} else {
@@ -45,23 +45,5 @@ class GildedRose {
 	}
 
 	private void updateQualityForSulfuras(Item item) {
-	}
-
-	private void updateQualityForBackstagePass(BackStagePassItem backStagePassItem, Item item) {
-		if (item.quality < 50) {
-			item.quality = item.quality + 1;
-
-			if (item.sellIn < 11) {
-				item.quality = item.quality + 1;
-			}
-
-			if (item.sellIn < 6) {
-				item.quality = item.quality + 1;
-			}
-		}
-		
-		if (item.sellIn < 1) {
-			item.quality = item.quality - item.quality;
-		}
 	}
 }

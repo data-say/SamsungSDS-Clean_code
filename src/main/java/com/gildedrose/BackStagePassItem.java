@@ -7,4 +7,22 @@ public class BackStagePassItem {
 	public BackStagePassItem(Item item) {
 		this.item= item;
 	}
+
+	void updateQualityForBackstagePass(GildedRose gildedRose, Item item) {
+		if (item.quality < 50) {
+			item.quality = item.quality + 1;
+	
+			if (item.sellIn < 11) {
+				item.quality = item.quality + 1;
+			}
+	
+			if (item.sellIn < 6) {
+				item.quality = item.quality + 1;
+			}
+		}
+		
+		if (item.sellIn < 1) {
+			item.quality = item.quality - item.quality;
+		}
+	}
 }
