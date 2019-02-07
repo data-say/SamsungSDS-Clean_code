@@ -2,8 +2,10 @@ package com.gildedrose;
 
 public class SulfurasItem {
 
+	private Item item;
+	
 	public SulfurasItem(Item item) {
-		// TODO Auto-generated constructor stub
+		this.item= item;
 	}
 
 }
