@@ -2,8 +2,9 @@ package com.gildedrose;
 
 public class BackStagePassItem {
 
+	private Item item;
+	
 	public BackStagePassItem(Item item) {
-		// TODO Auto-generated constructor stub
+		this.item= item;
 	}
-
 }
