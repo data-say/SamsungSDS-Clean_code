@@ -14,11 +14,13 @@ class GildedRose {
 		for (int i = 0; i < items.length; i++) {
 			Item item = items[i];
 			updateQuality(item);
-			updateSellIn(item);
+			
+			GildedRoseItem gildedRoseItem= GildedRoseItemFactory.getInstance().createGildedRoseItem(item); 
+			updateSellIn(gildedRoseItem, item);
 		}
 	}
 
-	private void updateSellIn(Item item) {
+	private void updateSellIn(GildedRoseItem gildedRoseItem, Item item) {
 		if (item.name.equals(SULFURAS)) {
 		} else {
 			item.sellIn = item.sellIn - 1;
