@@ -14,48 +14,64 @@ class GildedRose {
 		for (int i = 0; i < items.length; i++) {
 			Item item = items[i];
 			if (item.name.equals(AGED_BRIE)) {
-				if (item.quality < 50) {
-					item.quality = item.quality + 1;
-				}
-				
-				if (item.sellIn < 1) {
-					if (item.quality < 50) {
-						item.quality = item.quality + 1;
-					}
-				}
+				updateQualityForAgedBrie(item);
 			} else if (item.name.equals(BACKSTAGE_PASS)) {
-				if (item.quality < 50) {
-					item.quality = item.quality + 1;
-
-					if (item.sellIn < 11) {
-						item.quality = item.quality + 1;
-					}
-
-					if (item.sellIn < 6) {
-						item.quality = item.quality + 1;
-					}
-				}
-				
-				if (item.sellIn < 1) {
-					item.quality = item.quality - item.quality;
-				}
+				updateQualityForBackstagePass(item);
 			} else if (item.name.equals(SULFURAS)) {
-				
+				updateQualityForSulfuras(); 
 			} else {
-				if (item.quality > 0) {
-					item.quality = item.quality - 1;
-				}
-				
-				if (item.sellIn < 1) {
-					if (item.quality > 0) {
-						item.quality = item.quality - 1;
-					}
-				}
+				updateQualityForNormal(item);
 			}
 
 			if (item.name.equals(SULFURAS)) {
 			} else {
 				item.sellIn = item.sellIn - 1;
+			}
+		}
+	}
+
+	private void updateQualityForNormal(Item item) {
+		if (item.quality > 0) {
+			item.quality = item.quality - 1;
+		}
+		
+		if (item.sellIn < 1) {
+			if (item.quality > 0) {
+				item.quality = item.quality - 1;
+			}
+		}
+	}
+
+	private void updateQualityForSulfuras() {
+		System.out.println("sulfuras temp log.");
+	}
+
+	private void updateQualityForBackstagePass(Item item) {
+		if (item.quality < 50) {
+			item.quality = item.quality + 1;
+
+			if (item.sellIn < 11) {
+				item.quality = item.quality + 1;
+			}
+
+			if (item.sellIn < 6) {
+				item.quality = item.quality + 1;
+			}
+		}
+		
+		if (item.sellIn < 1) {
+			item.quality = item.quality - item.quality;
+		}
+	}
+
+	private void updateQualityForAgedBrie(Item item) {
+		if (item.quality < 50) {
+			item.quality = item.quality + 1;
+		}
+		
+		if (item.sellIn < 1) {
+			if (item.quality < 50) {
+				item.quality = item.quality + 1;
 			}
 		}
 	}
