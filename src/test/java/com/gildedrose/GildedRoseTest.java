@@ -125,6 +125,17 @@ public class GildedRoseTest {
 	@Test
 	public void Step9_BackstagePass아이템_판매기간15_품질0_테스트() {
 		
+		// arrange
+		Item[] items= new Item[]{new Item(BACKSTAGE_PASS, 15, 0)};		
+		GildedRose gildedRose= new GildedRose(items);
+		
+		// act
+		gildedRose.updateQuality();
+		
+		// assert
+		assertEquals(BACKSTAGE_PASS, items[0].name);
+		assertEquals(14, items[0].sellIn);
+		assertEquals(1, items[0].quality);		
 	}
 	
 	@Test
