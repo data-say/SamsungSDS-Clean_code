@@ -2,6 +2,20 @@ package com.gildedrose;
 
 public class GildedRoseItemFactory {
 
+	private static GildedRoseItemFactory instance;
+	
+	private GildedRoseItemFactory() {
+		
+	}
+	
+	public static synchronized GildedRoseItemFactory getInstance() {
+		if(instance == null) {
+			instance = new GildedRoseItemFactory();
+		} 
+		
+		return instance;
+	}
+	
 	GildedRoseItem createGildedRoseItem(Item item) {
 		
 		GildedRoseItem gildedRoseItem;

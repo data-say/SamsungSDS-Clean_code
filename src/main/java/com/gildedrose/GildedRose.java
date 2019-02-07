@@ -26,8 +26,7 @@ class GildedRose {
 	}
 
 	private void updateQuality(Item item) {
-		GildedRoseItemFactory gildedRoseItemFactory= new GildedRoseItemFactory(); 
-		GildedRoseItem gildedRoseItem = gildedRoseItemFactory.createGildedRoseItem(item);
+		GildedRoseItem gildedRoseItem = GildedRoseItemFactory.getInstance().createGildedRoseItem(item);
 		gildedRoseItem.updateQuality();
 	}
 }
