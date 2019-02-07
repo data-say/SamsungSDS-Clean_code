@@ -16,14 +16,7 @@ class GildedRose {
 			updateQuality(item);
 			
 			GildedRoseItem gildedRoseItem= GildedRoseItemFactory.getInstance().createGildedRoseItem(item); 
-			updateSellIn(gildedRoseItem, item);
-		}
-	}
-
-	private void updateSellIn(GildedRoseItem gildedRoseItem, Item item) {
-		if (item.name.equals(SULFURAS)) {
-		} else {
-			item.sellIn = item.sellIn - 1;
+			gildedRoseItem.updateSellIn(this, item);
 		}
 	}
 
