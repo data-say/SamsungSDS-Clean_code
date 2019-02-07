@@ -24,7 +24,7 @@ class GildedRose {
 				sulfurasItem.updateQualityForSulfuras(); 
 			} else {
 				NormalItem normalItem= new NormalItem(item); 
-				updateQualityForNormal(item);
+				updateQualityForNormal(normalItem, item);
 			}
 
 			if (item.name.equals(SULFURAS)) {
@@ -34,7 +34,7 @@ class GildedRose {
 		}
 	}
 
-	private void updateQualityForNormal(Item item) {
+	private void updateQualityForNormal(NormalItem normalItem, Item item) {
 		if (item.quality > 0) {
 			item.quality = item.quality - 1;
 		}
