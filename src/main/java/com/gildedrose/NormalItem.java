@@ -8,7 +8,7 @@ public class NormalItem {
 		this.item= item;
 	}
 
-	void updateQualityForNormal() {
+	void updateQuality() {
 		if (item.quality > 0) {
 			item.quality = item.quality - 1;
 		}
