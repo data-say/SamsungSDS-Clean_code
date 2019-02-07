@@ -1,13 +1,12 @@
 package com.gildedrose;
 
-public class SulfurasItem {
+public class SulfurasItem extends GildedRoseItem {
 
-	private Item item;
-	
 	public SulfurasItem(Item item) {
-		this.item= item;
+		super(item);
 	}
 
-	void updateQuality() {
+	@Override
+	public void updateQuality() {
 	}
 }
