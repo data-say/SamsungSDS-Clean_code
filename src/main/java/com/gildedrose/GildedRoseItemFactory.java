@@ -2,7 +2,7 @@ package com.gildedrose;
 
 public class GildedRoseItemFactory {
 
-	GildedRoseItem createGildedRoseItem(GildedRose gildedRose, Item item) {
+	GildedRoseItem createGildedRoseItem(Item item) {
 		
 		GildedRoseItem gildedRoseItem;
 		if (item.name.equals(GildedRose.AGED_BRIE)) {
