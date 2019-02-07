@@ -21,7 +21,7 @@ class GildedRose {
 				backStagePassItem.updateQualityForBackstagePass();
 			} else if (item.name.equals(SULFURAS)) {
 				SulfurasItem sulfurasItem= new SulfurasItem(item);
-				updateQualityForSulfuras(sulfurasItem, item); 
+				sulfurasItem.updateQualityForSulfuras(item); 
 			} else {
 				updateQualityForNormal(item);
 			}
@@ -43,8 +43,5 @@ class GildedRose {
 				item.quality = item.quality - 1;
 			}
 		}
-	}
-
-	private void updateQualityForSulfuras(SulfurasItem sulfurasItem, Item item) {
 	}
 }
