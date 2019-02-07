@@ -14,6 +14,7 @@ class GildedRose {
 		for (int i = 0; i < items.length; i++) {
 			Item item = items[i];
 			if (item.name.equals(AGED_BRIE)) {
+				AgedBrieItem agedBrieItem= new AgedBrieItem(item);
 				updateQualityForAgedBrie(item);
 			} else if (item.name.equals(BACKSTAGE_PASS)) {
 				updateQualityForBackstagePass(item);
