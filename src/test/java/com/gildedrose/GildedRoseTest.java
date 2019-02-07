@@ -140,11 +140,15 @@ public class GildedRoseTest {
 	
 	@Test
 	public void Step10_Sulfuras아이템_판매기간_마이너스1_품질5_테스트() {
+		
+		// arrange
 		Item[] items= new Item[]{new Item(SULFURAS, -1, 5)};		
 		GildedRose gildedRose= new GildedRose(items);
 		
+		// act
 		gildedRose.updateQuality();
 		
+		// assert
 		assertEquals(SULFURAS, items[0].name);
 		assertEquals(-1, items[0].sellIn);
 		assertEquals(5, items[0].quality);		
@@ -153,6 +157,17 @@ public class GildedRoseTest {
 	@Test
 	public void Step11_AgedBrie아이템_판매기간0_품질55_테스트() {
 		
+		// arrange
+		Item[] items= new Item[]{new Item(AGED_BRIE, 0, 55)};		
+		GildedRose gildedRose= new GildedRose(items);
+		
+		// act
+		gildedRose.updateQuality();
+		
+		// assert
+		assertEquals(AGED_BRIE, items[0].name);
+		assertEquals(-1, items[0].sellIn);
+		assertEquals(55, items[0].quality);		
 	}
 	
 	@Test
