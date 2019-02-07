@@ -173,5 +173,14 @@ public class GildedRoseTest {
 	@Test
 	public void Step12_GildedRose_Item_toString_Å×½ºÆ®() {
 		
+		// arrange
+		Item[] items= new Item[]{new Item(NORMAL_ITEM, 0, 0)};		
+		GildedRose gildedRose= new GildedRose(items);
+		
+		// act
+		String toString= items[0].toString();
+		
+		// assert
+		assertEquals("Normal Item, 0, 0", toString);		
 	}
 }
