@@ -38,6 +38,17 @@ public class GildedRoseTest {
 	@Test
 	public void Step3_Normal아이템_판매기간0_품질5_테스트() {
 		
+		// arrange
+		Item[] items= new Item[]{new Item("Normal Item", 0, 5)};
+		GildedRose gildedRose= new GildedRose(items);
+		
+		// act
+		gildedRose.updateQuality();
+		
+		// assert
+		assertEquals("Normal Item", items[0].name);
+		assertEquals(-1, items[0].sellIn);
+		assertEquals(3, items[0].quality);		
 	}
 	
 	@Test
