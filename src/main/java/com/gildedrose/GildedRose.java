@@ -14,17 +14,17 @@ class GildedRose {
 		for (int i = 0; i < items.length; i++) {
 			Item item = items[i];
 			if (item.name.equals(AGED_BRIE)) {
-				AgedBrieItem agedBrieItem= new AgedBrieItem(item);
-				agedBrieItem.updateQuality();
+				GildedRoseItem gildedRoseItem= new AgedBrieItem(item);
+				gildedRoseItem.updateQuality();
 			} else if (item.name.equals(BACKSTAGE_PASS)) {
-				BackStagePassItem backStagePassItem= new BackStagePassItem(item); 
-				backStagePassItem.updateQuality();
+				GildedRoseItem gildedRoseItem= new BackStagePassItem(item); 
+				gildedRoseItem.updateQuality();
 			} else if (item.name.equals(SULFURAS)) {
-				SulfurasItem sulfurasItem= new SulfurasItem(item);
-				sulfurasItem.updateQuality(); 
+				GildedRoseItem gildedRoseItem= new SulfurasItem(item);
+				gildedRoseItem.updateQuality(); 
 			} else {
-				NormalItem normalItem= new NormalItem(item); 
-				normalItem.updateQuality();
+				GildedRoseItem gildedRoseItem= new NormalItem(item); 
+				gildedRoseItem.updateQuality();
 			}
 
 			if (item.name.equals(SULFURAS)) {
