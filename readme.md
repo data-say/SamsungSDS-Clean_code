@@ -10,6 +10,10 @@ org.hamcrest.CoreMatchers
 
 org.junit.Assert
 
+# GildedRose JUnit 설정
+프로젝트 우클릭 - [Properties] - [Java Build Path] - [Libraries] - [Add Library] - [JUnit]
+
+JUnit4 선택
 
 # GildedRose 업무설명
 
