@@ -1,10 +1,13 @@
 # GildedRose Static Import 설정
 Windows -> Preferences 메뉴
+
 Java -> Editor -> Content Assist -> Favorites 항목
 
 “New Type…” 버튼 : “ 클릭하여 아래내용 추가
 
+
 org.hamcrest.CoreMatchers
+
 org.junit.Assert
 
 
