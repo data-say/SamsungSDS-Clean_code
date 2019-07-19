@@ -1,3 +1,8 @@
+# 개발환경
+JDK 1.8이상
+
+Eclipse Download 및 설치 ([다운로드](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2019-06/R/eclipse-inst-win64.exe))
+
 # GildedRose Static Import 설정
 Windows -> Preferences 메뉴
 
