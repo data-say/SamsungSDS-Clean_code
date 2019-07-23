@@ -2,11 +2,11 @@ package com.gildedrose;
 
 public class Item {
 
-    public String name;
+    public String name; // 상품이름
 
-    public int sellIn;
+    public int sellIn; // 판매기한
 
-    public int quality;
+    public int quality; // 품질
 
     public Item(String name, int sellIn, int quality) {
         this.name = name;
